@@ -64,13 +64,20 @@ console.log(team);
 for (let i = 0; i < team.length; i++) {
     const row = document.querySelector('.row');
     const card = document.createElement('div');
-    card.classList.add('col');
+    card.classList.add('col', 'col-4', 'mb-5');
     //console.log(card);
 
     card.innerHTML = `
-    <img src="img/${team[i].img}"> <br>
-    ${team[i].name} ${team[i].lastname} <br>
-     ${team[i].role}
+
+    <img src="img/${team[i].img}">
+    <div class="bg-white p-3 p">
+     <span class="text-body-tertiary"> 
+     <strong>
+     ${team[i].name} ${team[i].lastname} 
+     </strong>
+     </span>
+     <div class="text-body-tertiary">${team[i].role}<div>
+     </div>
     `;
 
     row.append(card);
@@ -80,28 +87,47 @@ const buttonAdd = document.querySelector('.btn.btn-primary');
 
 // funzione per aggiungere un nuovo membro
 buttonAdd.addEventListener('click', addMember);
-function addMember (){
-const formEl = document.getElementById('form');
-formEl.classList.remove('d-none');
+function addMember() {
+    const formEl = document.getElementById('form');
+    formEl.classList.remove('d-none');
 }
+
 
 const buttonSubmit = document.querySelector('.btn.btn-success');
 
 // funzione per prendere i valori
-buttonSubmit.addEventListener('click', (e)=>{
+buttonSubmit.addEventListener('click', (e) => {
     e.preventDefault();
-        const nameVal = document.getElementById('name').value;
-        const lastNameVal = document.getElementById('lastname').value;
-        const roleVal = document.getElementById('role').value;
-        const imageVal = document.getElementById('images').value;
-        //console.log(nameVal);
+    const nameVal = document.getElementById('name').value;
+    const lastNameVal = document.getElementById('lastname').value;
+    const roleVal = document.getElementById('role').value;
+    const imageVal = document.getElementById('images').value;
+    //console.log(nameVal);
 
-        // nuovo membro
-        const newMember = {
-            'name' : nameVal,
-            'lastname' : lastNameVal,
-            'role' : roleVal,
-            'img' : imageVal 
-        }
-        team.push(newMember);
+    // nuovo membro
+    const newMember = {
+        'name': nameVal,
+        'lastname': lastNameVal,
+        'role': roleVal,
+        'img': imageVal
+    }
+    team.push(newMember);
+
+    const row = document.querySelector('.row');
+    const card = document.createElement('div');
+    card.classList.add('col','col-4', 'mb-5');
+
+    card.innerHTML = `
+    <img src="img/${newMember.img}"> <br>
+    <div class="bg-white p-3 p">
+     <span class="text-body-tertiary"> 
+     <strong>
+   ${newMember.name} ${newMember.lastname} 
+   </strong>
+   </span>
+   <div class="text-body-tertiary"> ${newMember.role} <div>
+     </div>
+    `;
+  
+    row.appendChild(card);
 });
