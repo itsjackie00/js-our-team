@@ -130,4 +130,5 @@ buttonSubmit.addEventListener('click', (e) => {
     `;
   
     row.appendChild(card);
+    document.getElementById('form').reset();
 });
