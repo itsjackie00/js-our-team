@@ -75,3 +75,12 @@ for (let i = 0; i < team.length; i++) {
 
     row.append(card);
 }
+
+const buttonAdd = document.querySelector('.btn.btn-primary');
+
+// funzione per aggiungere un nuovo membro
+buttonAdd.addEventListener('click', addMember);
+function addMember (){
+const formEl = document.getElementById('form');
+formEl.classList.remove('d-none');
+}
