@@ -22,40 +22,56 @@ Permettere l'aggiunta di un nuovo membro del team
 let team = [
     {
         'name': 'Wayne',
-        'lastname' : 'Barnett',
-        'role' : 'Founder & CEO',
-        'img' : 'wayne-barnett-founder-ceo.jpg'
+        'lastname': 'Barnett',
+        'role': 'Founder & CEO',
+        'img': 'wayne-barnett-founder-ceo.jpg'
     },
     {
         'name': 'Angela',
-        'lastname' : 'Caroll',
-        'role' : 'Chief Editor',
-        'img' : 'angela-caroll-chief-editor.jpg'
+        'lastname': 'Caroll',
+        'role': 'Chief Editor',
+        'img': 'angela-caroll-chief-editor.jpg'
 
     },
     {
         'name': 'Walter',
-        'lastname' : 'Gordon',
-        'role' : 'Office Manager',
-        'img' : 'walter-gordon-office-manager.jpg'
+        'lastname': 'Gordon',
+        'role': 'Office Manager',
+        'img': 'walter-gordon-office-manager.jpg'
     },
     {
         'name': 'Angela',
-        'lastname' : 'Lopez',
-        'role' : 'Social Media Manager',
-        'img' : 'angela-lopez-social-media-manager.jpg'
+        'lastname': 'Lopez',
+        'role': 'Social Media Manager',
+        'img': 'angela-lopez-social-media-manager.jpg'
     },
     {
         'name': 'Scott',
-        'lastname' : 'Estrada',
-        'role' : 'Developer',
-        'img' : 'scott-estrada-developer.jpg'
+        'lastname': 'Estrada',
+        'role': 'Developer',
+        'img': 'scott-estrada-developer.jpg'
     },
     {
         'name': 'Barbara',
-        'lastname' : 'Ramos',
-        'role' : 'Graphic Designer',
-        'img' : 'barbara-ramos-graphic-designer.jpg'
+        'lastname': 'Ramos',
+        'role': 'Graphic Designer',
+        'img': 'barbara-ramos-graphic-designer.jpg'
     },
 ]
 console.log(team);
+
+
+for (let i = 0; i < team.length; i++) {
+    const row = document.querySelector('.row');
+    const card = document.createElement('div');
+    card.classList.add('col');
+    //console.log(card);
+
+    card.innerHTML = `
+    <img src="img/${team[i].img}"> <br>
+    ${team[i].name} ${team[i].lastname} <br>
+     ${team[i].role}
+    `;
+
+    row.append(card);
+}
