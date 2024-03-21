@@ -24,31 +24,38 @@ let team = [
         'name': 'Wayne',
         'lastname' : 'Barnett',
         'role' : 'Founder & CEO',
+        'img' : 'wayne-barnett-founder-ceo.jpg'
     },
     {
         'name': 'Angela',
         'lastname' : 'Caroll',
         'role' : 'Chief Editor',
+        'img' : 'angela-caroll-chief-editor.jpg'
+
     },
     {
         'name': 'Walter',
         'lastname' : 'Gordon',
         'role' : 'Office Manager',
+        'img' : 'walter-gordon-office-manager.jpg'
     },
     {
         'name': 'Angela',
         'lastname' : 'Lopez',
         'role' : 'Social Media Manager',
+        'img' : 'angela-lopez-social-media-manager.jpg'
     },
     {
         'name': 'Scott',
         'lastname' : 'Estrada',
         'role' : 'Developer',
+        'img' : 'scott-estrada-developer.jpg'
     },
     {
         'name': 'Barbara',
         'lastname' : 'Ramos',
         'role' : 'Graphic Designer',
+        'img' : 'barbara-ramos-graphic-designer.jpg'
     },
 ]
 console.log(team);
