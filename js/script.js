@@ -84,3 +84,24 @@ function addMember (){
 const formEl = document.getElementById('form');
 formEl.classList.remove('d-none');
 }
+
+const buttonSubmit = document.querySelector('.btn.btn-success');
+
+// funzione per prendere i valori
+buttonSubmit.addEventListener('click', (e)=>{
+    e.preventDefault();
+        const nameVal = document.getElementById('name').value;
+        const lastNameVal = document.getElementById('lastname').value;
+        const roleVal = document.getElementById('role').value;
+        const imageVal = document.getElementById('images').value;
+        //console.log(nameVal);
+
+        // nuovo membro
+        const newMember = {
+            'name' : nameVal,
+            'lastname' : lastNameVal,
+            'role' : roleVal,
+            'img' : imageVal 
+        }
+        team.push(newMember);
+});
