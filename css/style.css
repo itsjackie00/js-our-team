@@ -1,3 +1,10 @@
 body{
-    font-family: "Roboto Slab", serif;
+    font-family: "Montserrat", sans-serif;
+    background-color: #F5F5F1;
+}
+.row{
+    text-align: center;
+}
+img{
+    width: 100%;
 }
